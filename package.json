@@ -12,10 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c ./rollup.config.js",
     "prettier": "prettier src --write",
-    "eslint": "eslint src --fix",
-    "prepare": "husky install",
-    "lint-staged": "lint-staged --allow-empty",
-    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx "
+    "eslint": "eslint src --fix"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
@@ -64,12 +61,10 @@
     "react": "^18.2.0",
     "rollup-plugin-node-externals": "^5.0.0",
     "rollup-plugin-postcss": "^4.0.2",
-    "tslib": "^2.4.0",
-    "husky": "^8.0.0"
+    "tslib": "^2.4.0"
   },
   "dependencies": {
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1"
+    "eslint-plugin-prettier": "^4.2.1"
   }
 }
