@@ -1,0 +1,75 @@
+{
+  "name": "@hellozhang/my-tool",
+  "version": "0.0.1",
+  "description": "components",
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "es"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c ./rollup.config.js",
+    "prettier": "prettier src --write",
+    "eslint": "eslint src --fix",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged --allow-empty",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx "
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloZxuuu/tool-rollup.git"
+  },
+  "keywords": [
+    "tool",
+    "typescript",
+    "javascript"
+  ],
+  "author": {
+    "name": "Zhang X",
+    "email": "1345306401@qq.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/helloZxuuu/tool-rollup/issues"
+  },
+  "homepage": "https://github.com/helloZxuuu/tool-rollup#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-strip": "^2.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@types/react": "^18.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "autoprefixer": "^10.4.12",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.25.0",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "rollup-plugin-node-externals": "^5.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.4.0",
+    "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1"
+  }
+}
